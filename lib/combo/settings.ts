@@ -10,7 +10,7 @@ export const SETTINGS = [{
     { value: 'songLocations', name: 'Song Locations' },
     { value: 'anywhere', name: 'Anywhere' },
   ],
-  default: 'songLocations'
+  default: 'anywhere'
 }, {
   key: 'goldSkulltulaTokens',
   name: 'Gold Skulltula Tokens Shuffle',
@@ -22,7 +22,7 @@ export const SETTINGS = [{
     { value: 'overworld', name: 'Overworld Only' },
     { value: 'all', name: 'All Tokens' },
   ],
-  default: 'none'
+  default: 'all'
 }, {
   key: 'housesSkulltulaTokens',
   name: 'Houses Skulltula Tokens Shuffle',
@@ -33,7 +33,7 @@ export const SETTINGS = [{
     { value: 'cross', name: 'Gold Skulltulas Only' },
     { value: 'all', name: 'All Tokens' },
   ],
-  default: 'none'
+  default: 'all'
 }, {
   key: 'mapCompassShuffle',
   name: 'Map / Compass Shuffle',
@@ -45,7 +45,7 @@ export const SETTINGS = [{
     { value: 'starting', name: 'Starting Items' },
     { value: 'removed', name: 'Removed' },
   ],
-  default: 'ownDungeon'
+  default: 'starting'
 }, {
   key: 'smallKeyShuffle',
   name: 'Small Key Shuffle',
@@ -55,7 +55,7 @@ export const SETTINGS = [{
     { value: 'ownDungeon', name: 'Own Dungeon' },
     { value: 'anywhere', name: 'Anywhere' },
   ],
-  default: 'ownDungeon'
+  default: 'anywhere'
 }, {
   key: 'smallKeyShuffleHideout',
   name: 'Hideout Small Key Shuffle',
@@ -75,7 +75,7 @@ export const SETTINGS = [{
     { value: 'ownDungeon', name: 'Own Dungeon' },
     { value: 'anywhere', name: 'Anywhere' },
   ],
-  default: 'ownDungeon'
+  default: 'anywhere'
 }, {
   key: 'townFairyShuffle',
   name: 'Town Stray Fairy Shuffle',
@@ -97,7 +97,7 @@ export const SETTINGS = [{
     { value: 'ownDungeon', name: 'Own Dungeon' },
     { value: 'anywhere', name: 'Anywhere' },
   ],
-  default: 'mixed'
+  default: 'anywhere'
 }, {
   key: 'ganonBossKey',
   name: 'Ganon Boss Key Shuffle',
@@ -141,7 +141,7 @@ export const SETTINGS = [{
     { value: 'none', name: 'None' },
     { value: 'full', name: 'Full' },
   ],
-  default: 'none'
+  default: 'full'
 }, {
   key: 'shopShuffleMm',
   name: 'Shop Shuffle (MM)',
@@ -157,7 +157,7 @@ export const SETTINGS = [{
   name: 'Master Sword Shuffle',
   category: 'main',
   type: 'boolean',
-  default: true
+  default: false
 }, {
   key: 'shuffleGerudoCard',
   name: 'Gerudo Card Shuffle',
@@ -169,7 +169,7 @@ export const SETTINGS = [{
   name: 'Weird / Pocket Egg Content Shuffle',
   category: 'main',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'doorOfTime',
   name: 'Door of Time',
@@ -179,13 +179,13 @@ export const SETTINGS = [{
     { value: 'closed', name: 'Closed' },
     { value: 'open', name: 'Open' },
   ],
-  default: 'closed'
+  default: 'open'
 }, {
   key: 'crossWarpOot',
   name: 'Cross-Games OoT Warp Songs',
   category: 'main',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'crossWarpMm',
   name: 'Cross-Games MM Song of Soaring',
@@ -196,7 +196,7 @@ export const SETTINGS = [{
     { value: 'childOnly', name: 'Child Only' },
     { value: 'full', name: 'Child & Adult' },
   ],
-  default: 'none'
+  default: 'full'
 }, {
   key: 'erBoss',
   name: 'Boss Entrance Shuffle',
@@ -207,7 +207,7 @@ export const SETTINGS = [{
     { value: 'ownGame', name: 'Own Game' },
     { value: 'full', name: 'Full' },
   ],
-  default: 'none'
+  default: 'full'
 }, {
   key: 'erDungeons',
   name: 'Dungeon Entrance Shuffle',
@@ -218,19 +218,19 @@ export const SETTINGS = [{
     { value: 'ownGame', name: 'Own Game' },
     { value: 'full', name: 'Full' },
   ],
-  default: 'none'
+  default: 'full'
 }, {
   key: 'erSpiderHouses',
   name: 'Shuffle Spider Houses with Dungeons',
   category: 'entrances',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'erMinorDungeons',
   name: 'Shuffle OoT Minor Dungeons with Dungeons',
   category: 'entrances',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'progressiveShieldsOot',
   name: 'OoT Shields',
@@ -251,7 +251,7 @@ export const SETTINGS = [{
     { value: 'goron', name: 'Progressive Knife and Biggoron' },
     { value: 'progressive', name: 'Progressive' },
   ],
-  default: 'goron'
+  default: 'separate'
 }, {
   key: 'progressiveShieldsMm',
   name: 'MM Shields',
@@ -261,7 +261,7 @@ export const SETTINGS = [{
     { value: 'separate', name: 'Separate' },
     { value: 'progressive', name: 'Progressive' },
   ],
-  default: 'start'
+  default: 'separate'
 }, {
   key: 'progressiveGoronLullaby',
   name: 'MM Goron Lullaby',
@@ -271,97 +271,97 @@ export const SETTINGS = [{
     { value: 'single', name: 'Full Lullaby Only' },
     { value: 'progressive', name: 'Progressive' },
   ],
-  default: 'progressive'
+  default: 'single'
 }, {
   key: 'fairyOcarinaMm',
   name: 'Fairy Ocarina in MM',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'shortHookshotMm',
   name: 'Short Hookshot in MM',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedNutsSticks',
   name: 'Shared Nuts & Sticks',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedBows',
   name: 'Shared Bows',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedBombBags',
   name: 'Shared Bomb Bags',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedMagic',
   name: 'Shared Magic',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedMagicArrows',
   name: 'Shared Magic Arrows',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedSongs',
   name: 'Shared Songs',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedHookshot',
   name: 'Shared Hookshots',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedLens',
   name: 'Shared Lens of Truth',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedOcarina',
   name: 'Shared Ocarina of Time',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedMasks',
   name: 'Shared Masks',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedWallets',
   name: 'Shared Wallets',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'sharedHealth',
   name: 'Shared Health',
   category: 'items',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'csmc',
   name: 'Chest Size Matches Content',
   category: 'misc',
   type: 'boolean',
-  default: false
+  default: true
 }, {
   key: 'logic',
   name: 'Logic',
@@ -436,14 +436,60 @@ export const TRICKS = {
 export type Tricks = {[k in keyof typeof TRICKS]: boolean};
 export type Trick = keyof Tricks;
 
-const DEFAULT_ENABLED_TRICKS = new Set<Trick>(['OOT_NIGHT_GS']);
+const DEFAULT_ENABLED_TRICKS = new Set<Trick>([
+  'OOT_LENS',
+  'OOT_HIDDEN_GROTTOS',
+  'OOT_MIDO_SKIP',
+  'OOT_MAN_ON_ROOF',
+  'OOT_NIGHT_GS',
+  'OOT_DEKU_SKIP',
+  'OOT_DC_JUMP',
+  'OOT_VOLCANO_HOVERS',
+  'MM_LENS',
+  'MM_PALACE_BEAN_SKIP',
+  'MM_DARMANI_WALL',
+  'MM_NO_SEAHORSE',
+  'MM_ZORA_HALL_HUMAN',
+  'MM_GORON_BOMB_JUMP',
+  'MM_CAPTAIN_SKIP',
+]);
 
 const DEFAULT_TRICKS = Object.keys(TRICKS).reduce((tricks, trick) => {
   tricks[trick as Trick] = DEFAULT_ENABLED_TRICKS.has(trick as Trick);
   return tricks;
 }, {} as Tricks);
 
-const DEFAULT_JUNK_LOCATIONS: string[] = [];
+const DEFAULT_JUNK_LOCATIONS: string[] = [
+  "MM Beneath The Graveyard Dampe Chest",
+  "MM Beneath the Well Keese Chest",
+  "MM Beneath the Well Mirror Shield",
+  "MM Beneath the Well Skulltulla Chest",
+  "MM Moon Fierce Deity Mask",
+  "MM Moon Trial Deku HP",
+  "MM Moon Trial Goron HP",
+  "MM Moon Trial Link Chest 1",
+  "MM Moon Trial Link Chest 2",
+  "MM Moon Trial Link HP",
+  "MM Moon Trial Zora HP",
+  "MM Romani Ranch Aliens",
+  "MM Romani Ranch Cremia Escort",
+  "MM Swamp Archery Reward 1",
+  "MM Swamp Archery Reward 2",
+  "MM Tourist Information Boat Cruise",
+  "MM Town Archery Reward 1",
+  "MM Town Archery Reward 2",
+  "OOT Bombchu Bowling Reward 1",
+  "OOT Bombchu Bowling Reward 2",
+  "OOT Deku Theater Nuts Upgrade",
+  "OOT Deku Theater Sticks Upgrade",
+  "OOT Fishing Pond Adult",
+  "OOT Fishing Pond Child",
+  "OOT Gerudo Fortress Archery Reward 1",
+  "OOT Gerudo Fortress Archery Reward 2",
+  "OOT Market Pot House Big Poes",
+  "OOT Zora River Frogs Game",
+  "OOT Zora River Frogs Storms",
+];
 
 export const DUNGEONS = {
   DT: "Deku Tree",
